@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "mixin";
+//common
+$orangeColor: #FA4A0C;
+:root {
+    --background-color: #fff;
+    --color: #000000;
+    --transition-delay: 1s;
+    --color-li: #252B42;
+}
+
+body {
+    width: 100%;
+    // max-width: 1440px;
+    background-color: var(--background-color);
+    color: var(--color);
+    transition: var(--transition-delay);
+}
+
+.dark-mode {
+    --background-color: #000000;
+    --color: #FFF;
+    --color-li: #FFF;
+    opacity: 0.8;
+}
+
+//end common
+.header__container {
+    display: flex;
+    width: 100%;
+    height: 155px;
+    align-items: flex-start;
+    .logo {
+        width: 50%;
+        height: 100px;
+        margin: 26px 0 0 90px;
+        cursor: pointer;
+    }
+    .menu {
+        width: 50%;
+        line-height: 155px;
+        margin-right: 80px;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            li:first-child {
+                a {
+                    color: $orangeColor;
+                }
+            }
+            li:last-child {
+                display: none;
+            }
+            a {
+                text-decoration: none;
+                font-family: "Montserrat";
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 28px;
+                color: var(--color-li);
+                @include textFont();
+                &:hover {
+                    color: $orangeColor;
+                }
+            }
+        }
+    }
+}
+
+.container__banner {
+    width: 100%;
+    height: fit-content;
+    .banner__introduce {
+        height: 619px;
+        color: #fff;
+        &--background {
+            background: url(assets/images/banner.png) no-repeat;
+            background-size: 100% 100%;
+        }
+        .textContent {
+            width: 75%;
+            margin: 0 auto;
+            padding: 73px 0 48px 0;
+            h3 {
+                font-family: "Montserrat";
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 36px;
+                @include textFont();
+            }
+            h1 {
+                font-family: "Poppins";
+                font-weight: bold;
+                font-size: 58px;
+                line-height: 80px;
+                @include textFont();
+            }
+            h4 {
+                font-family: "Montserrat";
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 38px;
+                @include textFont();
+            }
+        }
+    }
+}
+
+.banner__introduce {
+    .btn__container {
+        display: flex;
+        justify-content: center;
+        .btn__playStore,
+        .btn__appStore {
+            width: 236px;
+            height: 68px;
+            border-radius: 30px;
+            padding: 16px 0 16px 0;
+            &:hover {
+                cursor: pointer;
+            }
+            h3 {
+                text-align: center;
+                line-height: 35px;
+            }
+        }
+        .btn__playStore {
+            background-color: $orangeColor;
+            margin-right: 15px;
+        }
+        .btn__appStore {
+            background-color: rgba(255, 255, 255, 0);
+            border: 1px solid #fff;
+            margin-left: 15px;
+        }
+    }
+}
+
+.content__container {
+    width: 100%;
+    .wrap__images {
+        display: flex;
+        position: absolute;
+        width: 548px;
+        height: 640px;
+        left: 455px;
+        top: 610px;
+        .content__images--left {
+            position: absolute;
+            bottom: -80px;
+            right: 156px;
+            z-index: 1;
+        }
+        .content__images--right {
+            position: absolute;
+            bottom: 0px;
+            right: 110px;
+        }
+    }
+    .textContent {
+        @extend .textContent;
+        h1 {
+            width: 65%;
+            margin: 0 auto;
+            padding: 59px 0 0 0;
+            margin-top: 550px;
+            border-top: 3px solid #E4E4E4;
+            @include textFont();
+        }
+    }
+}
+
+.container__introduce {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .images__location--left {
+        width: 50%;
+        padding-left: 50px;
+    }
+    .account__content {
+        width: 45%;
+        &--text {
+            h3 {
+                @include textIntroduce("Montserrat", 24px, normal, bold, 36px, 0.1px);
+                color: $orangeColor;
+                margin-bottom: 17px
+            }
+            h2 {
+                @include textIntroduce("Montserrat", 40px, normal, bold, 57px, 0.2px);
+                margin-bottom: 27px
+            }
+            h4 {
+                @include textIntroduce("Montserrat", 24px, normal, 500, 38px, 0.2px);
+                color: #737373;
+            }
+        }
+        &--location {
+            width: 568px;
+            margin: 245px 0 0 20px;
+        }
+    }
+    .images__location--right {
+        order: 2;
+        width: 50%;
+        padding-left: 70px;
+    }
+    .exploreVarieties__content {
+        @extend .account__content;
+        @extend .account__content--text;
+        &--order {
+            order: 1;
+        }
+        &--location {
+            width: 460px;
+            margin: 170px 0 0 175px;
+        }
+    }
+}
+
+.banner__download {
+    @extend .banner__introduce;
+    &--background {
+        background: url(assets/images/bannerDownload.png) no-repeat;
+        background-size: 100%;
+    }
+    h2 {
+        @include textIntroduce("Montserrat", 40px, normal, bold, 57px, 0.2px);
+        text-align: center;
+        margin: 40px 0 20px 0;
+    }
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: -30px 0 50px 0;
+    .logo:hover {
+        cursor: pointer;
+    }
+    .socical__container {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        span {
+            color: $orangeColor;
+            font-size: 30px;
+            padding: 0 10px 0 10px;
+            margin-top: 10px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .copyRight {
+        display: flex;
+        align-items: center;
+        p {
+            @include textIntroduce("Roboto", 12px, normal, bold, 18px, 0.1px);
+            color: #5C5C5C;
+        }
+    }
+}
+
+.form__container {
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    z-index: 9998;
+    display: none;
+    .pseudo--background {
+        width: 100%;
+        height: 100vh;
+        background-color: #000000;
+        opacity: 0.4;
+        z-index: 9999;
+    }
+    .wrap__form {
+        width: 700px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        h3 {
+            @include textIntroduce("Roboto", 24px, normal, bold, 28px, 0.1px);
+            margin: 29px 0 29px 0;
+            color: #000000;
+        }
+        p {
+            margin-top: 3px;
+            color: red;
+            transition: display var(--transition-delay);
+            @include textIntroduce("Roboto", 14px, normal, normal, 20px, 0.1px);
+        }
+    }
+    .box-input {
+        display: flex;
+        width: 85%;
+        margin-bottom: 20px;
+        label {
+            width: 170px;
+            height: 30px;
+            color: #000000;
+            @include textIntroduce("Roboto", 17px, normal, normal, 20px, 0.1px);
+        }
+        .wrap__input {
+            flex: 1;
+        }
+        input {
+            height: 32px;
+            width: 100%;
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+    .btn-submit {
+        width: 227px;
+        height: 50px;
+        background: #A6A0A0;
+        box-shadow: 2px 8px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        text-align: center;
+        color: #FFFCFC;
+        margin-bottom: 16px;
+        @include textIntroduce("Roboto", 24px, normal, bold, 50px, 0.1px);
+        &:hover {
+            cursor: pointer;
+            opacity: 0.9;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: #000000;
+        margin: 20px;
+        @include textIntroduce("Roboto", 24px, normal, normal, 28px, 0.1px);
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

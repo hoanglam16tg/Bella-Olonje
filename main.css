@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+:root {
+  --background-color: #fff;
+  --color: #000000;
+  --transition-delay: 1s;
+  --color-li: #252B42; }
+
+body {
+  width: 100%;
+  background-color: var(--background-color);
+  color: var(--color);
+  transition: var(--transition-delay); }
+
+.dark-mode {
+  --background-color: #000000;
+  --color: #FFF;
+  --color-li: #FFF;
+  opacity: 0.8; }
+
+.header__container {
+  display: flex;
+  width: 100%;
+  height: 155px;
+  align-items: flex-start; }
+  .header__container .logo {
+    width: 50%;
+    height: 100px;
+    margin: 26px 0 0 90px;
+    cursor: pointer; }
+  .header__container .menu {
+    width: 50%;
+    line-height: 155px;
+    margin-right: 80px; }
+    .header__container .menu ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none; }
+      .header__container .menu ul li:first-child a {
+        color: #FA4A0C; }
+      .header__container .menu ul li:last-child {
+        display: none; }
+      .header__container .menu ul a {
+        text-decoration: none;
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 28px;
+        color: var(--color-li);
+        font-style: normal;
+        text-align: center;
+        letter-spacing: 0.2px; }
+        .header__container .menu ul a:hover {
+          color: #FA4A0C; }
+
+.container__banner {
+  width: 100%;
+  height: fit-content; }
+  .container__banner .banner__introduce, .container__banner .banner__download {
+    height: 619px;
+    color: #fff; }
+    .container__banner .banner__introduce--background {
+      background: url(assets/images/banner.png) no-repeat;
+      background-size: 100% 100%; }
+    .container__banner .banner__introduce .textContent, .container__banner .banner__download .textContent {
+      width: 75%;
+      margin: 0 auto;
+      padding: 73px 0 48px 0; }
+      .container__banner .banner__introduce .textContent h3, .container__banner .banner__download .textContent h3 {
+        font-family: "Montserrat";
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+        font-style: normal;
+        text-align: center;
+        letter-spacing: 0.2px; }
+      .container__banner .banner__introduce .textContent h1, .container__banner .banner__download .textContent h1 {
+        font-family: "Poppins";
+        font-weight: bold;
+        font-size: 58px;
+        line-height: 80px;
+        font-style: normal;
+        text-align: center;
+        letter-spacing: 0.2px; }
+      .container__banner .banner__introduce .textContent h4, .container__banner .banner__download .textContent h4 {
+        font-family: "Montserrat";
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 38px;
+        font-style: normal;
+        text-align: center;
+        letter-spacing: 0.2px; }
+
+.banner__introduce .btn__container, .banner__download .btn__container {
+  display: flex;
+  justify-content: center; }
+  .banner__introduce .btn__container .btn__playStore, .banner__download .btn__container .btn__playStore,
+  .banner__introduce .btn__container .btn__appStore,
+  .banner__download .btn__container .btn__appStore {
+    width: 236px;
+    height: 68px;
+    border-radius: 30px;
+    padding: 16px 0 16px 0; }
+    .banner__introduce .btn__container .btn__playStore:hover, .banner__download .btn__container .btn__playStore:hover,
+    .banner__introduce .btn__container .btn__appStore:hover,
+    .banner__download .btn__container .btn__appStore:hover {
+      cursor: pointer; }
+    .banner__introduce .btn__container .btn__playStore h3, .banner__download .btn__container .btn__playStore h3,
+    .banner__introduce .btn__container .btn__appStore h3,
+    .banner__download .btn__container .btn__appStore h3 {
+      text-align: center;
+      line-height: 35px; }
+  .banner__introduce .btn__container .btn__playStore, .banner__download .btn__container .btn__playStore {
+    background-color: #FA4A0C;
+    margin-right: 15px; }
+  .banner__introduce .btn__container .btn__appStore, .banner__download .btn__container .btn__appStore {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #fff;
+    margin-left: 15px; }
+
+.content__container {
+  width: 100%; }
+  .content__container .wrap__images {
+    display: flex;
+    position: absolute;
+    width: 548px;
+    height: 640px;
+    left: 455px;
+    top: 610px; }
+    .content__container .wrap__images .content__images--left {
+      position: absolute;
+      bottom: -80px;
+      right: 156px;
+      z-index: 1; }
+    .content__container .wrap__images .content__images--right {
+      position: absolute;
+      bottom: 0px;
+      right: 110px; }
+  .content__container .textContent h1 {
+    width: 65%;
+    margin: 0 auto;
+    padding: 59px 0 0 0;
+    margin-top: 550px;
+    border-top: 3px solid #E4E4E4;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 0.2px; }
+
+.container__introduce {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .container__introduce .images__location--left {
+    width: 50%;
+    padding-left: 50px; }
+  .container__introduce .account__content, .container__introduce .exploreVarieties__content {
+    width: 45%; }
+    .container__introduce .account__content--text h3, .container__introduce .exploreVarieties__content h3 {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 36px;
+      letter-spacing: 0.1px;
+      color: #FA4A0C;
+      margin-bottom: 17px; }
+    .container__introduce .account__content--text h2, .container__introduce .exploreVarieties__content h2 {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 57px;
+      letter-spacing: 0.2px;
+      margin-bottom: 27px; }
+    .container__introduce .account__content--text h4, .container__introduce .exploreVarieties__content h4 {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 38px;
+      letter-spacing: 0.2px;
+      color: #737373; }
+    .container__introduce .account__content--location {
+      width: 568px;
+      margin: 245px 0 0 20px; }
+  .container__introduce .images__location--right {
+    order: 2;
+    width: 50%;
+    padding-left: 70px; }
+  .container__introduce .exploreVarieties__content--order {
+    order: 1; }
+  .container__introduce .exploreVarieties__content--location {
+    width: 460px;
+    margin: 170px 0 0 175px; }
+
+.banner__download--background {
+  background: url(assets/images/bannerDownload.png) no-repeat;
+  background-size: 100%; }
+.banner__download h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  margin: 40px 0 20px 0; }
+
+.footer__container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: -30px 0 50px 0; }
+  .footer__container .logo:hover {
+    cursor: pointer; }
+  .footer__container .socical__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center; }
+    .footer__container .socical__container span {
+      color: #FA4A0C;
+      font-size: 30px;
+      padding: 0 10px 0 10px;
+      margin-top: 10px; }
+      .footer__container .socical__container span:hover {
+        cursor: pointer; }
+  .footer__container .copyRight {
+    display: flex;
+    align-items: center; }
+    .footer__container .copyRight p {
+      font-family: "Roboto";
+      font-style: normal;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 18px;
+      letter-spacing: 0.1px;
+      color: #5C5C5C; }
+
+.form__container {
+  width: 100%;
+  height: fit-content;
+  position: fixed;
+  z-index: 9998;
+  display: none; }
+  .form__container .pseudo--background {
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 0.4;
+    z-index: 9999; }
+  .form__container .wrap__form {
+    width: 700px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px; }
+    .form__container .wrap__form h3 {
+      font-family: "Roboto";
+      font-style: normal;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 28px;
+      letter-spacing: 0.1px;
+      margin: 29px 0 29px 0;
+      color: #000000; }
+    .form__container .wrap__form p {
+      margin-top: 3px;
+      color: red;
+      transition: display var(--transition-delay);
+      font-family: "Roboto";
+      font-style: normal;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 20px;
+      letter-spacing: 0.1px; }
+  .form__container .box-input {
+    display: flex;
+    width: 85%;
+    margin-bottom: 20px; }
+    .form__container .box-input label {
+      width: 170px;
+      height: 30px;
+      color: #000000;
+      font-family: "Roboto";
+      font-style: normal;
+      font-size: 17px;
+      font-weight: normal;
+      line-height: 20px;
+      letter-spacing: 0.1px; }
+    .form__container .box-input .wrap__input {
+      flex: 1; }
+    .form__container .box-input input {
+      height: 32px;
+      width: 100%;
+      background: #FFFFFF;
+      border: 1px solid #000000;
+      box-sizing: border-box;
+      border-radius: 10px; }
+    .form__container .box-input input[type=text],
+    .form__container .box-input input[type=password] {
+      width: 100%;
+      padding: 0 20px; }
+  .form__container .btn-submit {
+    width: 227px;
+    height: 50px;
+    background: #A6A0A0;
+    box-shadow: 2px 8px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    text-align: center;
+    color: #FFFCFC;
+    margin-bottom: 16px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 50px;
+    letter-spacing: 0.1px; }
+    .form__container .btn-submit:hover {
+      cursor: pointer;
+      opacity: 0.9; }
+  .form__container a {
+    text-decoration: none;
+    color: #000000;
+    margin: 20px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 28px;
+    letter-spacing: 0.1px; }
+    .form__container a:hover {
+      opacity: 0.8; }
+
+/*# sourceMappingURL=main.css.map */

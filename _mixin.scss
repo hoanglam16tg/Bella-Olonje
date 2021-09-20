@@ -1,0 +1,14 @@
+@mixin textFont {
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+@mixin textIntroduce($fontFamily, $fontSize, $fontStyle, $fontWeight, $lineHeight, $letterSpacing) {
+    font-family: $fontFamily;
+    font-style: $fontStyle;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+}
